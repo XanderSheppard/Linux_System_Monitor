@@ -30,7 +30,7 @@ float Process::CpuUtilization() const {
     
 
     // Calculate the process's total time
-    long totalTime = LinuxParser::UpTime() - (processStartTime / sysconf(_SC_CLK_TCK));
+    long totalTime = LinuxParser::UpTime() - (processStartTime);
 
    // Calculate the CPU utilization as the ratio of active jiffies to total time
     long int activeJiffies = LinuxParser::ActiveJiffies(pid_);
